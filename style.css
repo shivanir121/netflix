@@ -1,0 +1,325 @@
+:root
+{
+    --primary-color:#e50914;
+    --dark-color: #141414;
+    --light: #999999;
+}
+
+*
+{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+h1, h2, h3, h4
+{
+    color: white;
+}
+
+a
+{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover
+{
+    color: var(--light);
+}
+
+ul
+{
+    list-style: none;
+}
+
+.btn
+{
+    color: white;
+    background: var(--primary-color);
+    padding: 0.4rem 1.3rem;
+}
+
+.btn-lg
+{
+    font-size: 2rem;
+    padding: 1.5rem 2.1rem;
+    text-transform: uppercase;
+}
+
+p
+{
+    margin: .5rem 0;
+}
+
+img
+{
+    width: 100%;
+}
+
+.showcase
+{
+    background: url('https://i.ibb.co/vXqDmnh/background.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 93vh;
+    position: relative;
+}
+
+.showcase::after
+{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0, 0, 0.6);
+    z-index: 1;
+    box-shadow: inset 120px 100px 200px black, inset -120px -100px 200px black;
+}
+
+
+.showcase-top
+{
+    position: relative;
+    height: 90px;
+    z-index: 2;
+}
+
+.showcase-top img
+{
+    width: 170px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.showcase-top a
+{
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translate(-50%,-50%);
+
+}
+
+.showcase-content 
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 9rem;
+    z-index: 2;
+}
+
+.showcase-content h1
+{
+    font-weight: 700;
+    font-size: 5.2rem;
+    line-height: 1.1;
+    margin: 0 0 1.5rem;
+}
+
+.showcase-content p
+{
+    font-size: 1.9rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 2.1rem;
+} 
+
+/* tabs */
+
+.tabs
+{
+    background-color: var(--dark-color) ;
+    border-bottom: 3px solid #836d6d;
+    padding-top: 1rem;
+    color: #999999;
+}
+
+.tabs .container
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1rem;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.tabs .container p
+{
+    font-size: 1.2rem;
+    padding: .5rem 0;
+}
+
+.tabs .container > div
+{
+    padding: 1.5rem 0;
+}
+
+.tabs .container > div:hover
+{
+    color: white;
+    cursor: pointer;
+}
+
+.tab-border
+{
+    border-bottom: 3px solid var(--primary-color);
+}
+
+/* tab-content */
+
+.tabs-content 
+{
+    padding: 5rem 0;
+}
+
+/* hide contntent  */
+
+#tab-1-content, #tab-2-content, #tab-3-content
+{
+    display: none;
+}
+.show 
+{
+    display: block !important;
+}
+
+.left
+{
+    padding: 6rem 0;
+}
+
+.tab-2-content .container ~ p{
+    padding: 10rem;
+}
+
+
+table tbody tr td:first-child
+{
+    text-align: left;
+}
+
+
+/* footer */
+
+footer 
+{
+    padding: 0rem 0rem 2rem 0 ;
+}
+
+/* utility */
+
+
+.text-lg 
+{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    
+}
+
+.text-medium
+{
+    font-size: 1.2rem;
+}
+
+.text-dark
+{
+    color: var(--dark-color);
+}
+
+.light
+{
+    color: var(--light);
+}
+
+.title
+{
+    padding: 1rem 0;
+}
+
+.default
+{
+    padding: .8rem 3.5rem;
+}
+
+.table
+{
+    color: var(--light);
+    margin: 2rem 0;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #222;
+}
+
+/* media queries */
+
+@media(max-width:960px)
+{
+    .showcase
+    {
+        height: 70vh;
+    }
+
+    .showcase-top img {
+        width: 170px;
+        position: absolute;
+        top: 30%;
+        left: 5%;
+        transform: translate(10%,-5%);
+    }
+
+    .showcase-content h1
+    {
+        font-weight: 700;
+        font-size: 3.2rem;
+        line-height: 1;
+        margin: 0 0 1.5rem;
+    }
+
+    .showcase-content p
+    {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.1;
+        margin-bottom: 2.1rem; 
+    }
+
+    .btn-lg {
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+        text-transform: uppercase;
+    }
+
+    .tabs .container .tab-item .hide-sm
+    {
+        display: none;
+    }
+   
+    .tabs-content
+    {
+        text-align: center;
+        padding: 3rem 0;
+    }
+
+    .left {
+        padding: 0;
+    }
+
+
+}
